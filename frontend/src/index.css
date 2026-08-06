@@ -1,0 +1,137 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+/* ===== EVConnect Design System — Constructivist/Transit Identity ===== */
+
+@layer base {
+  :root {
+    --color-paper: #F7F6F1;
+    --color-ink: #141410;
+    --color-green: #146B3A;
+    --color-amber: #D98E04;
+    --color-red: #B23A2E;
+    --color-steel: #6E6E64;
+  }
+
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-family: 'IBM Plex Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+  }
+}
+
+/* Typography utilities */
+.font-display {
+  font-family: 'Archivo', sans-serif;
+}
+.font-body {
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+.font-mono-data {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+/* Hard offset shadow — the ticket/block shadow effect */
+.shadow-hard {
+  box-shadow: 3px 3px 0px 0px var(--color-ink);
+}
+.shadow-hard-sm {
+  box-shadow: 2px 2px 0px 0px var(--color-ink);
+}
+.shadow-hard-green {
+  box-shadow: 3px 3px 0px 0px var(--color-green);
+}
+.shadow-hard-pressed {
+  box-shadow: 0px 0px 0px 0px var(--color-ink);
+  transform: translate(3px, 3px);
+}
+
+/* Voltage stripe — diagonal repeating band */
+.voltage-stripe {
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--color-ink),
+    var(--color-ink) 6px,
+    var(--color-green) 6px,
+    var(--color-green) 12px
+  );
+}
+
+/* Voltage stripe loading bar animation */
+@keyframes voltage-slide {
+  0% { background-position: 0 0; }
+  100% { background-position: 40px 0; }
+}
+.voltage-loading {
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--color-ink),
+    var(--color-ink) 6px,
+    var(--color-green) 6px,
+    var(--color-green) 12px
+  );
+  background-size: 40px 40px;
+  animation: voltage-slide 0.8s linear infinite;
+}
+
+/* Available status indicator with voltage stripe fill */
+.status-available-stripe {
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--color-green),
+    var(--color-green) 3px,
+    var(--color-ink) 3px,
+    var(--color-ink) 6px
+  );
+}
+
+/* Leaflet popup restyling — light/paper theme */
+.leaflet-popup-content-wrapper {
+  background-color: var(--color-paper) !important;
+  color: var(--color-ink) !important;
+  border: 2px solid var(--color-ink) !important;
+  border-radius: 2px !important;
+  box-shadow: 3px 3px 0px 0px var(--color-ink) !important;
+  font-family: 'IBM Plex Sans', sans-serif !important;
+}
+
+.leaflet-popup-tip {
+  background-color: var(--color-paper) !important;
+  border: 1px solid var(--color-ink) !important;
+}
+
+/* Hero pin highlight — no glow, solid border pulse */
+@keyframes pulse-border {
+  0%, 100% { border-color: var(--color-green); }
+  50% { border-color: var(--color-ink); }
+}
+.hero-pin-highlight {
+  animation: pulse-border 1.5s ease-in-out infinite;
+  border: 3px solid var(--color-green) !important;
+  z-index: 1000 !important;
+}
+
+/* Scrollbar — light theme */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-paper);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-steel);
+  border-radius: 0px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-ink);
+}
+
+/* Button press interaction */
+.btn-hard:active {
+  box-shadow: 0px 0px 0px 0px var(--color-ink);
+  transform: translate(3px, 3px);
+}
