@@ -1,6 +1,7 @@
 // API client service for EVConnect Backend
 
-const BASE_URL = '/api';
+const API_HOST = import.meta.env.VITE_API_BASE_URL || '';
+const BASE_URL = `${API_HOST}/api`;
 
 export async function fetchStations() {
   const res = await fetch(`${BASE_URL}/stations`);

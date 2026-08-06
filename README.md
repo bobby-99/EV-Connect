@@ -294,6 +294,21 @@ npm run dev
 ```
 *Frontend runs on `http://localhost:5173`.*
 
+### 3. Production Cloud Deployment Guide
+
+#### A. Backend Deployment (Render / Railway / Docker)
+1. **Render**: Create a new **Web Service**, connect your GitHub repo, and set root directory to `backend`. Select **Docker** environment or Java Runtime.
+2. Set Environment Variables:
+   - `SPRING_DATASOURCE_URL`: *(Optional: Neon PostgreSQL URL, defaults to H2)*
+   - `SPRING_DATASOURCE_USERNAME`: *(Database user)*
+   - `SPRING_DATASOURCE_PASSWORD`: *(Database password)*
+
+#### B. Frontend Deployment (Vercel / Netlify / Render)
+1. **Vercel**: Import repository, set root directory to `frontend`.
+2. Set Build Command: `npm run build` & Output Directory: `dist`.
+3. Add Environment Variable:
+   - `VITE_API_BASE_URL`: `https://your-backend-url.onrender.com` (your deployed backend URL)
+
 ---
 
 ## 9. Future Roadmap
