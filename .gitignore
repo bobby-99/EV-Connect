@@ -29,3 +29,5 @@ backend/target/
 # Scratch & Temporary files
 scratch/
 .system_generated/
+STUDY.md
+
