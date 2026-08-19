@@ -1,6 +1,10 @@
 # EVConnect India ⚡
 > **Predictive EV Charging Network — Station Finder, Slot Reservation & Trip Planner for Bangalore, India**
 
+[![Live App](https://img.shields.io/badge/Live%20App-ev--volt--link.vercel.app-146B3A?style=for-the-badge&logo=vercel)](https://ev-volt-link.vercel.app)
+
+🔗 **Live Demo**: [https://ev-volt-link.vercel.app](https://ev-volt-link.vercel.app)
+
 ---
 
 ## 1. Executive Summary & Vision

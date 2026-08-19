@@ -1,6 +1,10 @@
 # EVConnect India — Predictive EV Charging Network
 ## Comprehensive Technical & Architectural Documentation
 
+> **Target Use Case**: Hackathons, Project Presentations, Technical Vivas, and Code Walkthroughs  
+> **Format**: PDF-Optimized Standard Markdown  
+> **Live Web App**: [https://ev-volt-link.vercel.app](https://ev-volt-link.vercel.app)
+
 ---
 
 ## 1. Executive Summary & Vision
