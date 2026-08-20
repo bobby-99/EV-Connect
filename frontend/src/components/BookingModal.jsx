@@ -73,7 +73,7 @@ export default function BookingModal({ station, slot, selectedVehicle, onClose, 
         animate={{ scale: 1, opacity: 1, y: 0 }}
         exit={{ scale: 0.9, opacity: 0, y: 15 }}
         transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-        className="bg-[#F7F6F1] border-2 border-[#141410] rounded-none max-w-lg w-full p-6 shadow-hard relative overflow-hidden"
+        className="bg-[#F7F6F1] border-2 border-[#141410] rounded-none max-w-lg w-full p-4 sm:p-6 shadow-hard relative overflow-y-auto max-h-[90vh]"
       >
         {/* Close Button */}
         <button
